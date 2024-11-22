@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Ysabeau Office", sans-serif;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  /* Header styling */
+  .header {
+    width: 100%;
+    height: 330px;
+    background: url('/img/recipeHeader.png') no-repeat center center;
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    z-index: 1;
+  }
+  /* Container styling */
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  /* Sidebar styling */
+  .sidebar {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    padding: 130px 8px 0px 8px;
+    background-color: rgba(136, 146, 160, 0.8);
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    z-index: 2; 
+
+  }
+  .sidebar:hover {
+    width: 200px;
+    display: flex;
+    
+ 
+  }
+  .sidebar .icon-button {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 25px;
+    cursor: pointer;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 30px;
+  }
+  .sidebar .icon-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+   
+  }
+  .icon-button i {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    
+  }
+  .icon-button span {
+    display: none;
+  }
+  .sidebar:hover .icon-button span {
+    display: inline;
+  }
+  .blur-logo {
+    position: absolute;
+    z-index: 11;
+    left: 70px;
+    top: 5px;
+    width: 700px;
+    height: 130px;
+    background: rgba(217, 217, 217, 0.89); /* Background color */
+    filter: blur(90px); /* Apply blur only to the pseudo-element */
+}
+#blur-img{
+    position: absolute;
+    z-index: 12;
+    left: 70px;
+    top: 5px;
+    width: 40%;
+   
+   
+}
+main{
+    margin: 50px 180px 100px 180px;
+}
+.recipeList-title{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+.main-matching{
+    background-color: hsla(0, 0%, 85%, 0.11);
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    padding: 0 30px 80px 0;
+
+}
+.matching-title {
+    display: flex;
+    justify-content: space-between; /* Ensures items span across the full width */
+    align-items: center; 
+    padding: 60px 0px 0 50px;/* Vertically aligns items */
+    font-size: 32px;
+    font-family: "Ysabeau Office", sans-serif;
+    opacity: 40%;
+    
+
+}
+
+.matching-title, p:first-child, .food-container, p:first-child,
+#food-name {
+    margin-right: 70px; /* Adds spacing between 'ID' and 'Name' */
+}
+
+#food-name + p {
+    margin-left: auto; /* Pushes 'Matching %' to the right */
+}
+.scroll-foods{
+    display: flex;
+    flex-direction: column;
+    font-size: 32px;
+    gap: 50px;
+    overflow-y: auto;
+    max-height: 760px;
+    
+    
+}
+
+/* Scrollbar track */
+.scroll-foods::-webkit-scrollbar {
+    width: 20px;
+    
+    
+}
+
+/* Scrollbar track background */
+.scroll-foods::-webkit-scrollbar-track {
+    background-color: rgba(217, 217, 217, 0.23);
+/* Background color of the track */
+    border-radius: 10px; /* Rounded corners */
+   
+}
+
+/* Scrollbar thumb (the draggable part) */
+.scroll-foods::-webkit-scrollbar-thumb {
+    background: #D9D9D9; /* Цвет ползунка */
+    border: 3px solid #f4f4f4; /* Добавляет пустое пространство вокруг ползунка, совпадающее с цветом трека */
+    border-radius: 10px; 
+    height: 30px;
+}
+
+/* Scrollbar thumb hover state */
+.scroll-foods::-webkit-scrollbar-thumb:hover {
+    background: #aaa5a2; /* Darker shade on hover */
+}
+
+.food-container{
+    display: flex;
+    justify-content: space-between; /* Ensures items span across the full width */
+    align-items: center; 
+    padding: 30px 60px;/* Vertically aligns items */
+    font-size: 32px;
+    border: solid 3px #22DB04;
+    box-shadow: 0 0 30px 0 rgba(34, 219, 4, 0.58);
+    background: rgba(223, 175, 141, 0.3);
+
+}

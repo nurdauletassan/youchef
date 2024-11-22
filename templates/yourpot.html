@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/yourpot.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ysabeau+Office:ital,wght@0,1..1000;1,1..1000&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ysabeau+Office:ital,wght@0,1..1000;1,1..1000&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+</head>
+<body>
+        <!-- Header -->
+  <header class="header"></header>
+
+  <div class="background-images">
+    <img src="/img/yourpotpotato.png" alt="">
+  </div>
+
+  <!-- Container with Sidebar and Main Content -->
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+    <div class="icon-button" >
+            <img src="/img/window.svg" alt="" width="40px">
+            <span>
+                <img src="/img/left.svg" alt="" width="40px">
+            </span>
+          </div>
+      <div class="icon-button" onclick="showContent('homeContent')">
+        <img src="/img/home.svg" alt="" width="40px">
+        <span>Home</span>
+      </div>
+      <div class="icon-button" onclick="showContent('likesContent')">
+        <img src="/img/like.svg" alt="" width="40px">
+        <span>Likes</span>
+      </div>
+      <div class="icon-button" onclick="showContent('supportContent')">
+        <img src="/img/support.svg" alt="" width="40px">
+        <span>Support</span>
+      </div>
+      <div class="icon-button" onclick="showContent('userEmailContent')">
+        <img src="/img/user.svg" alt="" width="40px">
+        <span>User Email</span>
+      </div>
+      <div class="icon-button" >
+        
+        <div id="logout-icon">
+            <span><img src="/img/logout.svg" alt="" width="40px"></span>
+            
+            <span>Logout</span>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+        <div class="pot-logo"> 
+            <img src="/img/sample-logo.svg" alt="">
+            <p>YOURPOT</p>
+        </div>
+        <div class="ingredients-list"></div>
+        <div onclick="redirectToPage('/templates/recipeList.html')" class="search-button">
+            Search
+        </div>
+
+    </main>
+    <script src="/js/hello.js"></script>
+</body>
+
+</html>

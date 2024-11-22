@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/categories.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Ysabeau+Office:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+
+</head>
+<body>
+     <!-- Header -->
+  <header class="header"></header>
+
+  <!-- Container with Sidebar and Main Content -->
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+    <div class="icon-button" >
+            <img src="/img/window.svg" alt="" width="40px">
+            <span>
+                <img src="/img/left.svg" alt="" width="40px">
+            </span>
+          </div>
+      <div onclick="redirectToPage('/categories/landing.html')" class="icon-button" onclick="showContent('homeContent')">
+        <img src="/img/home.svg" alt="" width="40px">
+        <span>Home</span>
+      </div>
+      <div class="icon-button" onclick="showContent('likesContent')">
+        <img src="/img/like.svg" alt="" width="40px">
+        <span>Likes</span>
+      </div>
+      <div class="icon-button" onclick="showContent('supportContent')">
+        <img src="/img/support.svg" alt="" width="40px">
+        <span>Support</span>
+      </div>
+      <div class="icon-button" onclick="showContent('userEmailContent')">
+        <img src="/img/user.svg" alt="" width="40px">
+        <span>User Email</span>
+      </div>
+      <div class="icon-button" >
+        
+        <div onclick="redirectToPage('/templates/landing.html')" id="logout-icon">
+            <span><img src="/img/logout.svg" alt="" width="40px"></span>
+            
+            <span>Logout</span>
+        </div>
+      </div>
+    </aside>
+
+    
+    <main class="main-content">
+        <div class="main-content-img">
+            <img src="/img/Group 11 (2).png" alt="">
+        </div>
+        <div class="main-title">
+            <div class="line"></div>
+            <div class="lines-text">
+                <img src="/img/categories.svg" alt="">
+                <p>Categories</p>
+                <img src="/img/categories-right.svg" alt="">
+            </div>
+            <div class="line"></div>
+        </div>
+        <div class="circle-container">
+            <div class="logo-text" onclick="showCategoryContent('meat', event)">
+                <div class="circle">
+                    <img src="/img/meat.svg" alt="Icon 1">
+                </div>
+                <p class="undertext">MEAT</p>
+            
+            </div>
+            <div class="logo-text" onclick="showCategoryContent('pasta', event)">
+                <div class="circle">
+                    <img src="/img/pasta.svg" alt="Pasta">
+                </div>
+                <p class="undertext">PASTA</p>
+            </div>
+            
+            <div class="logo-text" onclick="showCategoryContent('vegetables', event)">
+                <div class="circle" >
+                    <img src="/img/vegetables.svg" alt="Vegetables">
+                </div>
+                <p class="undertext">VEGETABLES</p>
+            </div>
+            
+            <div class="logo-text" onclick="showCategoryContent('fruits', event)">
+                <div class="circle" >
+                    <img src="/img/fruits.svg" alt="Fruits">
+                </div>
+                <p class="undertext">FRUITS</p>
+            </div>
+            
+            <div class="logo-text" onclick="showCategoryContent('legumes', event)">
+                <div class="circle" >
+                    <img src="/img/legumes.svg" alt="Legumes">
+                </div>
+                <p class="undertext">LEGUMES</p>
+            </div>
+            
+            <div class="logo-text" onclick="showCategoryContent('seafood',event)">
+                <div class="circle" >
+                    <img src="/img/seafood.svg" alt="Seafood">
+                </div>
+                <p class="undertext">SEAFOOD</p>
+            </div>
+            
+            <div class="logo-text" onclick="showCategoryContent('nuts',event)">
+                <div class="circle" >
+                    <img src="/img/nuts.svg" alt="Nuts">
+                </div>
+                <p class="undertext">NUTS</p>
+            </div>
+            
+            <div class="logo-text"  onclick="showCategoryContent('eggs',event)">
+                <div class="circle">
+                    <img src="/img/eggs.svg" alt="Eggs">
+                </div>
+                <p class="undertext">EGGS</p>
+            </div>
+            
+            <div class="logo-text" onclick="showCategoryContent('grains',event)">
+                <div class="circle" >
+                    <img src="/img/grains.svg" alt="Grains">
+                </div>
+                <p class="undertext">GRAINS AND CEREALS</p>
+            </div>
+            
+            <div class="logo-text" onclick="showCategoryContent('dairy',event)">
+                <div class="circle" >
+                    <img src="/img/dairy.svg" alt="Dairy">
+                </div>
+                <p class="undertext">DAIRY PRODUCTS</p>
+            </div>
+            
+            <div class="logo-text" onclick="showCategoryContent('sauces',event)">
+                <div class="circle" >
+                    <img src="/img/sauces.svg" alt="Sauces">
+                </div>
+                <p class="undertext">SAUCES AND OILS</p>
+            </div>
+            
+            <div class="logo-text" onclick="showCategoryContent('baking', event)">
+                <div class="circle" >
+                    <img src="/img/baking.svg" alt="Baking">
+                </div>
+                <p class="undertext">BAKING AND SWEETS</p>
+            </div>
+            
+          </div>
+          
+          
+     
+    </main>
+
+    <div id="fixed-circle" class="hidden" onclick="redirectToPage('/templates/yourpot.html')" >
+        <div class="logo">
+          <img src="/img/sample-logo.svg" alt="Logo">
+        </div>
+        <p class="text">YOURPOT</p>
+      </div>
+
+
+
+    <main class="main-content-categories">
+        <div id="vegetablesContent" class="category-content">
+            <div class="title-container">
+                <img src="/img/cutted-line.svg" alt="">
+                <div class="back-title">
+                    <p id="vegetablesTitle" class="food-title">Vegetables</p>
+                </div>
+                <img src="/img/cutted-line.svg" alt="">
+            </div>
+            <div id="vegetables-card-container" class="cards-container"></div>
+        </div>
+         <!-- Pasta Content Section -->
+        <div id="pastaContent" class="category-content">
+            <div class="title-container">
+                <img src="/img/cutted-line.svg" alt="">
+                <div class="back-title">
+                    <p id="pastaTitle" class="food-title">Pasta</p>
+                </div>
+                <img src="/img/cutted-line.svg" alt="">
+            </div>
+            <div id="pasta-card-container" class="cards-container"></div>
+        </div>
+        <!-- Meal Content Section -->
+        <div id="meatContent" class="category-content" >
+            <div class="title-container">
+                <img src="/img/cutted-line.svg" alt="">
+                <div class="back-title">
+                    <p id="meatTitle" class="food-title">Meat</p>
+                </div>
+                <img src="/img/cutted-line.svg" alt="">
+            </div>
+            <div id="meat-card-container" class="cards-container"></div>
+        </div>
+
+        <div id="fruitsContent" class="category-content" >
+            <div class="title-container">
+                <img src="/img/cutted-line.svg" alt="">
+                <div class="back-title">
+                    <p id="fruitsTitle" class="food-title">Meat</p>
+                </div>
+                <img src="/img/cutted-line.svg" alt="">
+            </div>
+            <div id="fruits-card-container" class="cards-container"></div>
+        </div>
+
+        <div id="legumesContent" class="category-content" >
+            <div class="title-container">
+                <img src="/img/cutted-line.svg" alt="">
+                <div class="back-title">
+                    <p id="legumesTitle" class="food-title">Meat</p>
+                </div>
+                <img src="/img/cutted-line.svg" alt="">
+            </div>
+            <div id="legumes-card-container" class="cards-container"></div>
+        </div>
+
+        <div id="seafoodContent" class="category-content" >
+            <div class="title-container">
+                <img src="/img/cutted-line.svg" alt="">
+                <div class="back-title">
+                    <p id="seafoodTitle" class="food-title">Meat</p>
+                </div>
+                <img src="/img/cutted-line.svg" alt="">
+            </div>
+            <div id="seafood-card-container" class="cards-container"></div>
+        </div>
+        
+        <div id="nutsContent" class="category-content" >
+            <div class="title-container">
+                <img src="/img/cutted-line.svg" alt="">
+                <div class="back-title">
+                    <p id="nutsTitle" class="food-title">Meat</p>
+                </div>
+                <img src="/img/cutted-line.svg" alt="">
+            </div>
+            <div id="nuts-card-container" class="cards-container"></div>
+        </div>
+       
+        <div id="eggsContent" class="category-content" >
+            <div class="title-container">
+                <img src="/img/cutted-line.svg" alt="">
+                <div class="back-title">
+                    <p id="eggsTitle" class="food-title">Meat</p>
+                </div>
+                <img src="/img/cutted-line.svg" alt="">
+            </div>
+            <div id="eggs-card-container" class="cards-container"></div>
+        </div>
+
+        <div id="grainsContent" class="category-content" >
+            <div class="title-container">
+                <img src="/img/cutted-line.svg" alt="">
+                <div class="back-title">
+                    <p id="grainsTitle" class="food-title">Meat</p>
+                </div>
+                <img src="/img/cutted-line.svg" alt="">
+            </div>
+            <div id="grains-card-container" class="cards-container"></div>
+        </div>
+
+        <div id="dairyContent" class="category-content" >
+            <div class="title-container">
+                <img src="/img/cutted-line.svg" alt="">
+                <div class="back-title">
+                    <p id="dairyTitle" class="food-title">Meat</p>
+                </div>
+                <img src="/img/cutted-line.svg" alt="">
+            </div>
+            <div id="dairy-card-container" class="cards-container"></div>
+        </div>
+       
+        <div id="saucesContent" class="category-content" >
+            <div class="title-container">
+                <img src="/img/cutted-line.svg" alt="">
+                <div class="back-title">
+                    <p id="saucesTitle" class="food-title">Meat</p>
+                </div>
+                <img src="/img/cutted-line.svg" alt="">
+            </div>
+            <div id="sauces-card-container" class="cards-container"></div>
+        </div>
+
+        <div id="bakingContent" class="category-content" >
+            <div class="title-container">
+                <img src="/img/cutted-line.svg" alt="">
+                <div class="back-title">
+                    <p id="bakingTitle" class="food-title">Meat</p>
+                </div>
+                <img src="/img/cutted-line.svg" alt="">
+            </div>
+            <div id="baking-card-container" class="cards-container"></div>
+        </div>
+    
+        
+        <!-- Add more categories as needed... -->
+    </main>
+    
+  </div>
+  <script src="/js/hello.js"></script>
+</body>
+</html>

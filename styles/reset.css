@@ -1,0 +1,128 @@
+
+body {
+    margin: 0;
+    font-family: "Ysabeau Office", sans-serif;
+    background: #FDF3E8;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.background-images {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.veg-image {
+    position: absolute;
+   
+}
+
+
+.tomato {
+    height: 100vh;
+    left: 0;
+   
+}
+.registration-form {
+    width: 45%;
+    height: 75%;
+    margin: 69px 180px;
+    z-index: 2;
+    background: rgba(255, 255, 255);
+    padding: 25px 42px;
+    border-radius: 8px;
+    max-width: 1300px; /* Consistent maximum width */
+    min-width: 300px; /* Consistent minimum width */
+    max-height: 1100px; /* Consistent maximum height */
+    min-height: 600px; /* Consistent minimum height */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    box-sizing: border-box;
+}
+.logo1{
+    width: 55%; /* Scales based on form width */
+    display: block;
+    margin: 0 auto 10px;
+}
+.logo2{
+    width: 22%;
+    display: block;
+    margin: 0 auto 10px;
+
+}
+
+#form-title{
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.registration-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.registration-form input {
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding-right: 40px;
+}
+
+.registration-form button {
+    padding: 10px;
+    background-color: #0060B9;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.registration-form button:hover {
+    background-color: #0060B9;
+}
+
+.account-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+}
+.password-container {
+    position: relative;
+    width:100%;
+    box-sizing: border-box;
+}
+
+.password-container input {
+    width: 100%;
+    box-sizing: border-box;
+    
+}
+
+.eye-icon {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.sign-in-button {
+    color:#0060B9;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+   
+}

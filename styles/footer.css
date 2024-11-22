@@ -1,0 +1,182 @@
+/* Footer аймағының жалпы стилі */
+/* Footer негізгі стилі */
+
+#footer {
+    position: relative;
+    padding: 60px 60px 0 60px; /* Төменгі жағы мен жоғарғы жағын реттеу үшін */
+    background-color: #2E2E2E;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    background: url(/img/images/footer.png) no-repeat center center;
+    background-size: cover;
+    
+}
+
+
+.section-box-footer {
+    max-width: 1800px;
+    padding: 4rem;
+    width: 100%;
+    border-radius: 50px 50px 0 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), rgba(217, 217, 217, 0.15);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+   
+    z-index: 1;
+}
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.footer-grid > div {
+    flex: 1;
+    min-width: 200px;
+
+ 
+}
+.footer-items-block {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.footer-items-block-in {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+}
+.footer-items-block-in-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+}
+  
+  .footer-items-block-in-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+    
+   
+  }
+  
+  .footer-items-block-in-nav a:hover {
+    color: #E25701;;
+  }
+
+.footer-items {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 5px 0;
+    
+}
+
+.footer-items.f2 span {
+    color: #E25701;
+    font-weight: bold;
+}
+.footer-items.f1:hover {
+    color: #E25701;;
+  }
+.footer-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.footer-icons a {
+    color: #ffffff;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #D96D6D;
+    transition: transform 0.2s ease;
+}
+
+.footer-icons a:hover {
+    transform: scale(1.1);
+}
+
+.copyrights-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
+}
+.copyrights{
+    margin-top: 15px;
+}
+.cookies {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.cookies a {
+    color: #bbbbbb;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+.cookies a:hover {
+    color: #ffffff;
+}
+
+/* Responsive for Footer Section */
+@media (max-width: 1200px) {
+    .footer-grid > div {
+        min-width: 150px;
+    }
+
+    .section-box-footer {
+        padding: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-icons a {
+        width: 25px;
+        height: 25px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-box-footer {
+        padding: 2rem;
+    }
+
+    .footer-items {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .footer-icons {
+        gap: 15px;
+    }
+
+    .cookies {
+        flex-direction: column;
+        gap: 5px;
+    }
+}

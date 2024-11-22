@@ -1,0 +1,275 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Book Antiqua', sans-serif;
+  }
+  
+  /* Full-Screen Background */
+  body, html {
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth; /* Smooth scrolling */
+  }
+  
+  #premium {
+    background: url(/img/images/background-home.jpg) no-repeat center center/cover;
+
+    flex-direction: column;
+   
+    justify-content: center;
+    padding: 2rem;
+
+  }
+ 
+
+  .content-box-premium {
+    text-align: center;
+
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), rgba(217, 217, 217, 0.15);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1800px;
+    width: 100%;
+    height: 900px;
+  }
+  
+  .premium-title {
+    font-size: 3rem;
+    color: #FF8A00;
+    font-weight: bold;
+    margin-top: 5rem;
+  }
+  
+  .premium-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 40px auto;
+   
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .premium-text {
+    padding: 30px;
+    color: #ffffff;
+    font-size: 18px;
+    flex: 1;
+  }
+  
+  .premium-text p {
+    margin: 0;
+    line-height: 1.6;
+  }
+  
+  .premium-text .highlight {
+    color: #FF8A00;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .premium-text ul {
+    padding: 0;
+    list-style: none;
+    margin-top: 20px;
+  }
+  
+  .premium-text ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .premium-text ul li svg {
+    margin-right: 10px;
+    fill: #FF8A00;
+  }
+  
+  .premium-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .premium-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+/* Баға тізімі */
+.price-list{
+    flex-direction: column;
+
+    margin-top: 5rem;
+}
+.title {
+    color: #f48231;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.fst-line{
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    height: auto;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transform: scale(1); /* Default scale */
+    transition: transform 0.3s ease; /* Animation on hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarges the card on hover */
+}
+
+.plan {
+    font-weight: bold;
+    color: #555;
+    padding-top: 44px;
+}
+
+.discount {
+    color: #f48231;
+    
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+.discount-price{
+    font-size: 1em; 
+    color: #888;
+    text-align: end;
+    margin-bottom: 0.5em;
+}
+.price {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.highlight {
+    color: #f48231;
+   
+}
+
+.image {
+    background-image: url("/img/images/price-back.png")  ; /* Сурет жолын өзгертіңіз */
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(2px);
+    height: 120px;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.description {
+    color: #ffffff;
+    font-size: 1em;
+    padding: 20px;
+    padding-top: 40px;
+    text-align: start;
+   
+   
+  
+}
+
+.subscribe {
+    background-color: #fff;
+    border: 1px solid #DEB97A;
+    box-shadow: 2px 2px 40px 20px rgba(255, 138, 0, 0.25);
+    border-radius: 25px;
+    padding: 10px 20px;
+    color: #333;
+    cursor: pointer;
+    font-size: 1em;
+    width: 130px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.subscribe:hover {
+    background-color: #f48231;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+ 
+  .header {
+    padding: 0rem 4rem;
+    align-items: center;
+    justify-content: center;
+
+   
+  }
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+  
+  /* Респонсивті стильдер */
+  @media (max-width: 768px) {
+    .premium-card {
+      flex-direction: column;
+    }
+  
+    .premium-title {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .premium-title {
+      font-size: 2.5rem;
+    }
+  
+    .premium-text .highlight {
+      font-size: 1.3rem;
+    }
+  
+    .premium-text {
+      font-size: 16px;
+    }
+  
+    .premium-card {
+      margin: 20px auto;
+    }
+  }
+  

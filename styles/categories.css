@@ -1,0 +1,280 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Ysabeau Office", sans-serif;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  /* Header styling */
+  .header {
+    width: 100%;
+    height: 170px;
+    background: url('/img/Group\ 50.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+  }
+  /* Container styling */
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  /* Sidebar styling */
+  .sidebar {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    padding: 130px 8px 0px 8px;
+    background-color: rgba(136, 146, 160, 0.8);
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    z-index: 2; 
+
+  }
+  .sidebar:hover {
+    width: 200px;
+    display: flex;
+    
+ 
+  }
+  .sidebar .icon-button {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 25px;
+    cursor: pointer;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 30px;
+  }
+  .sidebar .icon-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+   
+  }
+  .icon-button i {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    
+  }
+  .icon-button span {
+    display: none;
+  }
+  .sidebar:hover .icon-button span {
+    display: inline;
+  }
+  /* Main content area styling */
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+.main-title{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+
+}
+.line {
+    width: 600px; 
+    height: 1px;           
+    background-color: rgba(0, 0, 0, 0.55); 
+    margin: 20px auto;      
+  }
+  .lines-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    padding: 0  56px;
+  }
+  .lines-text p{
+    font-size: 50px;
+  }
+  .lines-text img {
+    width: 45%; 
+  }
+  .main-content-img{
+    padding-left: 160px;
+  }
+  #logout-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+   
+  }
+
+  .circle-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* 8 колонок для первого ряда */
+    gap: 0px; /* Расстояние между кругами */
+    justify-content: center; /* Центрируем контейнер по горизонтали */
+    align-items: center; /* Центрируем элементы по вертикали */
+    max-width: 100%; /* Ширина контейнера */
+    margin:  auto 100px; /* Центрируем контейнер */
+    grid-template-rows: auto auto; /* 2 ряда для элементов */
+    grid-row-gap: 35px; /* Расстояние между рядами */
+    margin-top: 60px;
+  }
+  
+  .circle {
+    width: 110px; /* Диаметр круга */
+    height: 110px; /* Диаметр круга */
+    border-radius: 50%; /* Делаем круг */
+    border: 3px solid black; /* Черная рамка */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Чтобы изображения не выходили за пределы круга */
+  }
+  
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    gap: 12px;
+  }
+  
+  .circle img {
+    width: 70px; /* Ширина изображения внутри круга */
+    height: 70px; /* Высота изображения внутри круга */
+    object-fit: contain; /* Сохранение пропорций изображения */
+  }
+ 
+  
+ /* Центрируем второй ряд, задавая пустые колонки с помощью grid-column */
+.logo-text:nth-child(9) {
+    grid-column: 3 / 4; /* Первая кнопка второго ряда */
+  }
+  
+  .logo-text:nth-child(10) {
+    grid-column: 4 / 5; /* Вторая кнопка второго ряда */
+  }
+  
+  .logo-text:nth-child(11) {
+    grid-column: 5/ 6; /* Третья кнопка второго ряда */
+  }
+  
+  .logo-text:nth-child(12) {
+    grid-column: 6 / 7; /* Четвертая кнопка второго ряда */
+  }
+
+  /* Cards Container */
+
+  #fixed-circle {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: rgba(210, 131, 74, 0.5);
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 25px;
+    z-index: 3;
+  }
+  
+  .hidden {
+    display: block;
+  }
+  
+  #fixed-circle .logo img {
+    width: 130px;
+    height: 130px;
+    margin-bottom: 10px;
+  }
+
+/* Hide all category content by default */
+.category-content {
+  display: none;
+}
+
+/* Display the active category */
+.category-content.active {
+  display: block;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  justify-content: flex-start;
+  margin: 20px 160px;
+}
+
+.card {
+  flex: 1 1 calc(33.33% - 26px); /* 3 cards per line with a gap */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  max-width: calc(33.33% - 26px); /* Ensure consistent width */
+  padding: 40px;
+  margin-bottom: 40px;
+  transition: background-color 0.3s ease;
+}
+.card.selected {
+  background-color: lightgray; /* Фон для выбранной карточки */
+}
+.card img {
+  width: 250px;
+  height: 250px;
+}
+
+.card p {
+  margin: 10px 0 8px;
+  font-size: 40px;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Поднимаем карточку вверх на 5px */
+}
+
+
+.title-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 100px;
+  
+  
+}
+.back-title{
+  width: 700px;
+}
+.food-title{
+    border-radius: 50%;
+    font-size: 50px;
+    text-align: center;
+}
+
+.card.selected {
+  border: 2px solid green;
+  background-color: #e0ffe0;
+  transition: 0.3s;
+}
