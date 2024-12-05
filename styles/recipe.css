@@ -110,35 +110,37 @@ main{
     align-items: center; /* Vertically center the elements */
     position: relative; /* For centering the textWrapper absolutely */
     margin-bottom: 8px;
-    padding: 40px 180px 20px 180px;
+    padding: 40px 0px 20px 0px;
+    justify-content: center;
 }
 
 .textWrapper {
-    position: absolute; /* Allow centering inside the container */
-    left: 50%; /* Move to the horizontal center */
-    transform: translateX(-50%); /* Adjust for the width of the element */
+    
+  
+    padding: 0 160px;
     text-align: center; /* Center text inside the wrapper */
     font-size: 42px;
     color: #5A2605;;
 }
 
 .recipeTitle img {
-    margin-left: auto; /* Push the image to the far right */
-    width: 3.5%;
+    
+    width: 30px;
 }
 hr{
     background-color: rgba(111, 44, 3, 0.28);
     height: 3px;
     border: none;
-    margin-bottom: 55px;
+    margin-bottom: 35px;
 
 }
 .telegram-text{
     display: flex;
     font-size: 32px;
     align-items: center;
-    justify-content: space-between;
-    padding: 0px 160px;
+    justify-content: center;
+    gap: 60px;
+    padding: 0px 100px;
     font-family: "Ysabeau", sans-serif;
     font-optical-sizing: auto;
     font-weight: 200;
@@ -158,11 +160,12 @@ hr{
     padding: 0; /* Removes default padding */
     margin: 0 30px; /* Removes default margin */
     color: #5A2605;
+
     
 }
 
 .text-list li {
-  font-size: clamp(18px, 2vw, 22px); /* Минимальный, адаптивный, и максимальный размер шрифта */
+  font-size: clamp(18px, 29px, 50px); /* Минимальный, адаптивный, и максимальный размер шрифта */
    /* Устанавливает высоту строки */
   white-space: nowrap; /* Запрещает перенос текста */
   overflow: hidden; /* Скрывает избыточный текст */
@@ -175,6 +178,7 @@ hr{
   width: 100%; /* Ensures the parent container occupies full width */
   gap: 20px; /* Adds space between the two sections */
   align-items: flex-start; /* Aligns items to the top */
+ 
 }
 
 .ingredients-container {
@@ -182,18 +186,20 @@ hr{
   flex-direction: column;
   width: 40%; /* Set width to 40% */
   background-color: rgba(195, 159, 133, 0.14); /* Optional background */
-  padding: 40px; /* Optional padding */
+  padding: 30px; /* Optional padding */
   box-sizing: border-box; /* Ensures padding doesn't increase the width */
   padding-bottom: 150px;
   font-family: "Ysabeau", sans-serif;
+  
   
 }
 
 .ingredients-container p {
   text-align: center;
-  margin: 20px 0; /* Adjusts spacing around the title */
+  margin: 10px 0; /* Adjusts spacing around the title */
   color: #753208;
-  font-size: 26px;
+  
+  font-size: 31px;
 
 }
 
@@ -202,6 +208,107 @@ hr{
   padding: 10px; /* Optional padding */
   box-sizing: border-box; /* Ensures padding doesn't overflow */
   overflow: auto; /* Adds scrollbar if content overflows */
-  font-size: 35px;
+  font-size: 29px;
   
 }
+
+/* Fix grid on smaller screens */
+@media (max-width: 1440px) {
+  main{
+    margin: 50px 170px;
+  }
+  .recipeTitle {
+    padding: 0px 0px 20px 0px;
+}
+.telegram-text{
+  gap: 90px;
+}
+.textWrapper{
+  font-size: 35px;
+}
+.telegram-text{
+  font-size: 29px;
+  padding: 0 0px 0 39px;
+}
+hr{
+  margin-bottom: 20px;
+}
+.ingredients-text{
+  font-size: 26px;
+}
+.ingredients-container p{
+  font-size: 26px;
+}
+.text-list li{
+  font-size: 26px;
+}
+
+
+    
+}
+ 
+  
+  
+  
+  
+  /* Fix grid on smaller screens */
+  @media (max-width: 1200px) {
+    main{
+      margin: 50px 139px;
+    }
+    .recipeTitle {
+      padding: 0px 0px 0px 20px;
+  }
+  .telegram-text{
+    gap: 50px;
+  }
+  .textWrapper{
+    font-size: 30px;
+  }
+  .telegram-text img{
+    width: 60px;
+  }
+  .ingredients-text{
+    font-size: 24px;
+  }
+  .ingredients-container p{
+    font-size: 22px;
+  }
+  .text-list li{
+    font-size: 23px;
+  }
+  
+  }
+  
+
+  
+  /* Fix grid on smaller screens */
+  @media (max-width: 1024px) {
+    
+    main{
+      margin: 50px 120px;
+    }
+    .recipeTitle {
+      padding: 0px 0px 0px 20px;
+  }
+  .telegram-text{
+    gap: 50px;
+  }
+  .textWrapper{
+    font-size: 30px;
+  }
+  .telegram-text img{
+    width: 60px;
+  }
+  .ingredients-text{
+    font-size: 22px;
+  }
+  .ingredients-container p{
+    font-size: 20px;
+  }
+  .text-list li{
+    font-size: 20px;
+  }
+  
+  }
+  
