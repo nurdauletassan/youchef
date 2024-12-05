@@ -91,7 +91,14 @@
   .sidebar:hover .icon-button span {
     display: inline;
   }
-
+  #logout-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+   
+  }
   .pot-logo{
     display: flex;
     flex-direction: column;
@@ -173,4 +180,5 @@ main{
     font-family: "Alef", sans-serif;
     font-weight: 400;
     font-style: normal;
+    cursor: pointer;
 }

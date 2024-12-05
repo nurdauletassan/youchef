@@ -75,6 +75,14 @@
   .sidebar:hover .icon-button span {
     display: inline;
   }
+  #logout-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+   
+  }
   .blur-logo {
     position: absolute;
     z-index: 11;
@@ -146,6 +154,7 @@ hr{
 
 .text-list {
     list-style: none; /* Removes default bullet points */
+    list-style-type: none;
     padding: 0; /* Removes default padding */
     margin: 0 30px; /* Removes default margin */
     color: #5A2605;
@@ -153,18 +162,14 @@ hr{
 }
 
 .text-list li {
-    position: relative; /* Enables positioning of the dot */
-    padding-left: 40px; /* Adds space for the dot */
-    font-size: 35px;/* Adjust text size as needed */
+  font-size: clamp(18px, 2vw, 22px); /* Минимальный, адаптивный, и максимальный размер шрифта */
+   /* Устанавливает высоту строки */
+  white-space: nowrap; /* Запрещает перенос текста */
+  overflow: hidden; /* Скрывает избыточный текст */
+  text-overflow: ellipsis; /* Добавляет троеточие для длинных строк */
 }
 
-.text-list li::after {
-    content: '•'; /* The dot */
-    position: absolute; /* Positions the dot relative to the list item */
-    left: 10px; /* Aligns the dot to the right */
-    color: #6F2C03; /* Sets the dot color */
-    font-size: 35px;
-}
+
 .ingredients-data {
   display: flex;
   width: 100%; /* Ensures the parent container occupies full width */

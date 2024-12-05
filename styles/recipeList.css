@@ -75,6 +75,14 @@
   .sidebar:hover .icon-button span {
     display: inline;
   }
+  #logout-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+   
+  }
   .blur-logo {
     position: absolute;
     z-index: 11;
