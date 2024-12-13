@@ -356,6 +356,7 @@ function loadSelectedIngredients() {
 
 function renderSelectedIngredients() {
     const ingredientsList = document.querySelector('.ingredients-list');
+    console.log(ingredientsList)
     if (ingredientsList) {
         ingredientsList.innerHTML = ''; // Очищаем список
         console.log('Rendering ingredients...');
@@ -425,6 +426,36 @@ function findIngredientById(id) {
     }
     return null; // Если ингредиент не найден
 }
+
+async function searchByIngredients(ingredients) {
+    try {
+      const response = await fetch('http://localhost:8000/r', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ input:ingredients }),
+      });
+      console.log(response)
+  
+      if (!response.ok) {
+        throw new Error('Failed to fetch recipes');
+      }
+  
+      const data = await response.json();
+    //   const sampleData = [
+    //     { name: "Leek and Mushroom Quiche", matchingPercentage: 100 },
+    //     { name: "Cheesy Rosemary Meatball Bake", matchingPercentage: 100 }
+    // ];
+        localStorage.setItem('receiveddata', JSON.stringify(data));
+    
+      redirectToPage('/templates/recipeList.html') // Handle/display the recipe data
+
+    } catch (error) {
+      console.error('Error searching recipes:', error);
+    }
+  }
+  
 
 
 function redirectToPage(url) {

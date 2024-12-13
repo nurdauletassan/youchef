@@ -63,12 +63,25 @@
             <p>YOURPOT</p>
         </div>
         <div class="ingredients-list"></div>
-        <div onclick="redirectToPage('/templates/recipeList.html')" class="search-button">
+        <div onclick="search()" class="search-button">
             Search
         </div>
 
     </main>
     <script src="/js/hello.js"></script>
+    <script>
+    const search = () => {
+      const inp = localStorage.getItem('selectedIngredients'); // Corrected localStorage method
+      console.log(inp);
+  
+      // Assuming searchByIngredients is defined elsewhere
+      if (inp) {
+        searchByIngredients(JSON.parse(inp)); // Parse if stored as JSON
+      } else {
+        console.log("No ingredients found in localStorage.");
+      }
+    };
+    </script>
 </body>
 
 </html>

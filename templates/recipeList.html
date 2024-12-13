@@ -3,110 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Recipe List</title>
     <link rel="stylesheet" href="/styles/recipeList.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ysabeau+Office:ital,wght@0,1..1000;1,1..1000&family=Ysabeau:ital,wght@0,1..1000;1,1..1000&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ysabeau+Office:ital,wght@0,1..1000;1,1..1000&family=Ysabeau:ital,wght@0,1..1000;1,1..1000&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
 </head>
 <body>
-           <!-- Header -->
-  <header class="header"></header>
+    <!-- Header -->
+    <header class="header"></header>
 
-  <div class="blur-logo">
-    
-  </div>
-  <img id="blur-img" src="/img/Group 16.png" alt="">
+    <div class="blur-logo"></div>
+    <img id="blur-img" src="/img/Group 16.png" alt="Decorative Blur Image">
 
-  <!-- Container with Sidebar and Main Content -->
-  <div class="container">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-
-    <div class="icon-button" >
-            <img src="/img/window.svg" alt="" width="40px">
-            <span>
-                <img src="/img/left.svg" alt="" width="40px">
-            </span>
-          </div>
-      <div onclick="redirectToPage('/templates/categories.html')" class="icon-button" onclick="showContent('homeContent')">
-        <img src="/img/home.svg" alt="" width="40px">
-        <span>Home</span>
-      </div>
-      <div class="icon-button" onclick="showContent('likesContent')">
-        <img src="/img/like.svg" alt="" width="40px">
-        <span>Daily meal</span>
-      </div>
-      <div class="icon-button" onclick="showContent('supportContent')">
-        <img src="/img/support.svg" alt="" width="40px">
-        <span>Support</span>
-      </div>
-      <div class="icon-button" onclick="showContent('userEmailContent')">
-        <img src="/img/user.svg" alt="" width="40px">
-        <span>User Email</span>
-      </div>
-      <div class="icon-button" >
-        
-        <div id="logout-icon">
-            <span><img src="/img/logout.svg" alt="" width="40px"></span>
-            
-            <span>Logout</span>
-        </div>
-      </div>
-    </aside>
-
-    <main>
-        <div class="recipeList-title">
-            <p>Results</p>
-        </div>
-        <div class="main-matching">
-            <div class="matching-title">
-                <p>ID</p>
-                <p id="food-name">Name</p>
-                <p>Matching %</p>
+    <!-- Container with Sidebar and Main Content -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="icon-button">
+                <img src="/img/window.svg" alt="Window Icon" width="40px">
+                <span><img src="/img/left.svg" alt="Left Arrow" width="40px"></span>
             </div>
-            <div class="scroll-foods">
-                    <div class="food-container" onclick="redirectToPage('/templates/recipe.html')">
-                        <p>1</p>
-                        <p id="food-name">Leek and Mushroom Quiche</p>
-                        <p>100%</p>
-                    </div>
-                    <div class="food-container"  onclick="redirectToPage('/templates/recipe.html')">
-                        <p>2</p>
-                        <p id="food-name">Cheesy Rosemary Meatball Bake</p>
-                        <p>100%</p>
-                    </div>
-                    <div class="food-container"  onclick="redirectToPage('/templates/recipe.html')">
-                        <p>3</p>
-                        <p id="food-name">Mushroom Garlic Soup</p>
-                        <p>75%</p>
-                    </div>
-                    <div class="food-container"  onclick="redirectToPage('/templates/recipe.html')">
-                        <p>4</p>
-                        <p id="food-name">Miso Cream Pasta</p>
-                        <p>75%</p>
-                    </div>
-                    <div class="food-container"  onclick="redirectToPage('/templates/recipe.html')">
-                        <p>5</p>
-                        <p id="food-name">Heart Shaped Spinach Ravioli</p>
-                        <p>75%</p>
-                    </div>
-                    <div class="food-container" onclick="redirectToPage('/templates/recipe.html')">
-                        <p>6</p>
-                        <p id="food-name">Name of the Food</p>
-                        <p>62%</p>
-                    </div>
-                    <div class="food-container" onclick="redirectToPage('/templates/recipe.html')">
-                        <p>7</p>
-                        <p id="food-name">Name of the Food</p>
-                        <p>55%</p>
-                    </div>
+            <div class="icon-button" onclick="redirectToPage('/templates/categories.html')">
+                <img src="/img/home.svg" alt="Home Icon" width="40px">
+                <span>Home</span>
             </div>
+            <div class="icon-button">
+                <img src="/img/like.svg" alt="Daily Meal Icon" width="40px">
+                <span>Daily Meal</span>
+            </div>
+            <div class="icon-button">
+                <img src="/img/support.svg" alt="Support Icon" width="40px">
+                <span>Support</span>
+            </div>
+            <div class="icon-button">
+                <img src="/img/user.svg" alt="User Email Icon" width="40px">
+                <span>User Email</span>
+            </div>
+            <div class="icon-button">
+                <div id="logout-icon">
+                    <img src="/img/logout.svg" alt="Logout Icon" width="40px">
+                    <span>Logout</span>
+                </div>
+            </div>
+        </aside>
 
-        </div>
-    </main>
+        <!-- Main Content -->
+        <main>
+            <div class="recipeList-title">
+                <p>Results</p>
+            </div>
+            <div class="main-matching">
+                <div class="matching-title">
+                    <p>ID</p>
+                    <p class="food-name">Name</p>
+                    <p>Matching %</p>
+                </div>
+                <div class="scroll-foods"></div>
+            </div>
+        </main>
+    </div>
 
-  
-        <script src="/js/hello.js"></script>
+    <script src="/js/hello.js"></script>
+    <script>
+        // Function to redirect to another page
+        function redirectToPage(url) {
+            window.location.href = url;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            // Retrieve the 'receiveddata' item from localStorage
+            const receivedData = localStorage.getItem('receiveddata');
+
+            if (receivedData) {
+                const parsedData = JSON.parse(receivedData);
+
+                // Populate the food list dynamically
+                const scrollFoods = document.querySelector('.scroll-foods');
+                parsedData.forEach((food, index) => {
+                    const foodContainer = document.createElement('div');
+                    foodContainer.className = 'food-container';
+                    foodContainer.onclick = () => redirectToPage('/templates/recipe.html');
+                    foodContainer.innerHTML = `
+                        <p>${index + 1}</p>
+                        <p class="food-name">${food.name}</p>
+                        <p>${food.matchingPercentage}%</p>
+                    `;
+                    scrollFoods.appendChild(foodContainer);
+                });
+            } else {
+                console.log("No data found in localStorage for 'receiveddata'.");
+            }
+        });
+    </script>
 </body>
 </html>
